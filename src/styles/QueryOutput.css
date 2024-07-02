@@ -1,0 +1,64 @@
+.stats-container {
+  background: linear-gradient(135deg, #6b73ff, #ff6ec4); /* Blue to pink gradient */
+  color: white;
+  height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.stats-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stats-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.stats-item {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.stats-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.player-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.player-score {
+  font-size: 1.2em;
+}
+
+.back-button {
+  background-color: #ff6ec4;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Slightly bigger */
+  font-size: 1.2em; /* Larger font size */
+  border-radius: 30px; /* More rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #e654a6;
+}
