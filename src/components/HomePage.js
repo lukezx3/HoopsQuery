@@ -41,7 +41,7 @@ const HomePage = () => {
     <div className="home-page">
       <div id="home"></div>
       <div className="container">
-        <h1>NBA Shot Predictor</h1>
+        <h1>HoopsQuery</h1>
 
           <div className="input-container">
             <form onSubmit={handleSubmit}>
