@@ -13,7 +13,7 @@ CORS(app)
 #create db pool
 pool = psycopg2.pool.SimpleConnectionPool( 
     1, 20,
-    user=os.getenv('DB_USER'),
+    user='postgres',
     password=os.getenv('DB_PASSWORD'),
     host=os.getenv('DB_HOST'),
     port=os.getenv('DB_PORT'),
