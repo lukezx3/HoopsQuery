@@ -19,7 +19,7 @@ Packages/Libraries: <br />
 ### Setup
 
 1. Install Prerequisites <br />
-2. ```git clone(https://github.com/lukezx3/NBA-Shot-Projection.git``` <br />
+2. ```git clone https://github.com/lukezx3/HoopsQuery.git``` <br />
 3. ```cd <your project directory>``` <br />
 4. Run ```npm start from project directory``` to run react script <br />
 5. From another terminal/cmd-line tab: ```cd server``` <br />
