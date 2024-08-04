@@ -12,17 +12,13 @@ CORS(app)
 
 #create db pool
 pool = psycopg2.pool.SimpleConnectionPool( 
-    1, 20, user='postgres', password='', 
-    host='localhost', port='5432', database='nbashooting')
-
-#single db connection 
-# try:
-#     conn = psycopg2.connect(database="nbashooting", 
-#         user="postgres", 
-#         password="", 
-#         host="localhost", port="5432")
-# except Exception as err:
-#     print(err)
+    1, 20,
+    user=os.getenv('DB_USER'),
+    password=os.getenv('DB_PASSWORD'),
+    host=os.getenv('DB_HOST'),
+    port=os.getenv('DB_PORT'),
+    database=os.getenv('DB_NAME')
+)
 
 #get openapi key
 openai_api_key = os.getenv('OPENAI_API_KEY')
@@ -114,8 +110,6 @@ def generateSQL():
 
                 #obtain results from running query
                 finalres = curr.fetchall()
-                for x in finalres:
-                    print('Cursor result: ', x)
 
                 #close cursor and release db connection
                 curr.close()
