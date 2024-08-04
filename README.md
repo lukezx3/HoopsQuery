@@ -1,4 +1,4 @@
-# NBA-Shot-Projection
+# HoopsQuery
 
 ## Description
 
