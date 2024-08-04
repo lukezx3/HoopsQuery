@@ -10,6 +10,7 @@ The application works by allowing users to input queries related to NBA shot sta
 - Python3 <br />
 - PostGreSQL <br />
 - React <br />
+<br />
 Packages/Libraries: <br />
 - OpenAI <br />
 - Psycopg2-binary <br />
@@ -18,7 +19,7 @@ Packages/Libraries: <br />
 
 ### Setup
 
-1.Install Prerequisites
+1.Install Prerequisites <br />
 2. **Clone the repository:** <br />
    ```git clone(https://github.com/lukezx3/NBA-Shot-Projection.git``` <br />
 3. ```cd <your project directory>``` <br />
