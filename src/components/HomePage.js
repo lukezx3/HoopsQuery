@@ -24,7 +24,8 @@ const HomePage = () => {
       }
       //retrieve server-side response and redirect it to QueryOutput page with the data
       const responseJson = await response.json();
-      navigate('/result', { state: {resultList: responseJson}});
+      console.log(responseJson)
+      navigate('/result', { state: {resultList: responseJson, query:query}});
 
     } catch (error) {
       console.error(error.message);

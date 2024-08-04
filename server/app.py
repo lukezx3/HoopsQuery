@@ -62,7 +62,6 @@ schemaDescription = """
                 -PRIMARY KEY (shot_id, player_id)
                 -Indexes: indexes on player_id, player_name, season_1, team_id, team_name
               """
-
 #query route
 @app.route('/query', methods=['POST'])
 def generateSQL():
@@ -75,20 +74,20 @@ def generateSQL():
         app.logger.info(userInput)
 
         attempts = 0
-        maxAttempts = 20
+        maxAttempts = 5
         flag = True
+        error = ""
 
         #make connection to pool
         conn = pool.getconn()
         curr = conn.cursor()
-
         #requery if gpt generated query is invalid
         while attempts < maxAttempts:
             try:
                 if flag:
-                    fprompt = f"{schemaDescription}\nGenerate an SQL query for the following request: {userInput}"
+                    fprompt = f"{schemaDescription}\nGenerate an SQL query limited to a max of 10 results for the following request: {userInput}. Only return the SQL query and nothing else."
                 else:
-                    fprompt = f"{schemaDescription}\nQuery Failed. Regenerate an SQL query for the following request: {userInput}"
+                    fprompt = f"{schemaDescription}\nQuery Failed due to {error}. Regenerate an SQL query limited to a max of 10 results for the following request: {userInput}. Only return the SQL query and nothing else."
 
 
                 #generate sql query through gpt
@@ -115,6 +114,8 @@ def generateSQL():
 
                 #obtain results from running query
                 finalres = curr.fetchall()
+                for x in finalres:
+                    print('Cursor result: ', x)
 
                 #close cursor and release db connection
                 curr.close()
@@ -127,10 +128,12 @@ def generateSQL():
             
             #if ran too many times, output failed
             except Exception as err:
+                error = err
+                print("Error: ", err)
                 flag = False
                 attempts += 1
                 if attempts >= maxAttempts:
-                    print(err)
+                    # print(err)
                     pool.putconn(conn)
                     return jsonify({'success': False, 'error': "Failed to generate results."}), 500
 
