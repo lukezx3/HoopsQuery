@@ -2,9 +2,9 @@
 
 ## Description
 
-As an avid NBA fan, I’m passionate about exploring detailed shot statistics of NBA players. This project is a full-stack application designed to provide dynamic insights into NBA shot data. It leverages React.js, HTML, and CSS for a responsive and user-friendly frontend, while Flask and Python handle backend operations. PostgreSQL serves as the robust database for storing extensive datasets, and OpenAI's GPT-3.5 Turbo model powers the intelligent query processing.
+As an avid NBA fan, I’m passionate about exploring detailed shot statistics of NBA players. This project is a full-stack application designed to provide dynamic insights into NBA shot data. It leverages React.js, HTML, and CSS for a responsive and user-friendly frontend, while Flask and Python handle backend operations. PostgreSQL serves as the robust database for storing extensive datasets, and OpenAI's GPT-4o mini model powers the intelligent query processing.
 
-The application works by allowing users to input queries related to NBA shot statistics. These queries are processed by GPT-3.5 Turbo to dynamically generate the appropriate SQL commands. The backend then executes these queries against the PostgreSQL database and returns the results, which are displayed on a separate page, providing users with precise and actionable data insights.
+The application works by allowing users to input queries related to NBA shot statistics. These queries are processed by GPT-4o mini to dynamically generate the appropriate SQL commands. The backend then executes these queries against the PostgreSQL database and returns the results, which are displayed on a separate page, providing users with precise and actionable data insights.
 
 *NOTE: This data is strictly from the years 2004 to 2024 (some stats are not included such as playoffs, free-throws)*
 
