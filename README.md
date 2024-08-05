@@ -22,13 +22,13 @@ The application works by allowing users to input queries related to NBA shot sta
 1. Install Prerequisites <br />
 2. ```git clone https://github.com/lukezx3/HoopsQuery.git``` <br />
 3. ```cd <your project directory>``` <br />
-4. Run ```npm start from project directory``` to run react script <br />
+4. Run ```npm start``` from project directory to run react script <br />
 5. From another terminal/cmd-line tab: ```cd server``` <br />
 6. Run ```python3 app.py``` to start backend server <br />
 
 ### Demo
 
-https://github.com/user-attachments/assets/2bf425ae-7c38-4c1e-b0dd-0b6ac5461a97
+https://github.com/user-attachments/assets/87c40652-73a5-48cb-8308-c53cfda71b2c
 
 ### Acknowledgements
 
