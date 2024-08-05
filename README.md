@@ -6,11 +6,12 @@ As an avid NBA fan, I’m passionate about exploring detailed shot statistics of
 
 The application works by allowing users to input queries related to NBA shot statistics. These queries are processed by GPT-3.5 Turbo to dynamically generate the appropriate SQL commands. The backend then executes these queries against the PostgreSQL database and returns the results, which are displayed on a separate page, providing users with precise and actionable data insights.
 
+*NOTE: This data is strictly from the years 2004 to 2024 (some stats are not included such as playoffs, free-throws)*
+
 ### Prerequisites
 - Python3 <br />
 - PostGreSQL <br />
 - React <br />
-Packages/Libraries: <br />
 - OpenAI <br />
 - Psycopg2-binary <br />
 - Flask <br />
@@ -26,6 +27,8 @@ Packages/Libraries: <br />
 6. Run ```python3 app.py``` to start backend server <br />
 
 ### Demo
+
+https://github.com/user-attachments/assets/2bf425ae-7c38-4c1e-b0dd-0b6ac5461a97
 
 ### Acknowledgements
 
