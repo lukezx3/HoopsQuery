@@ -10,7 +10,7 @@ const HomePage = () => {
     event.preventDefault();
     try {
       //use JavaScript's fetch API to send request to server-side (app.py)
-      const url = "http://127.0.0.1:5000/query";
+      const url = BASEURL;
       const response = await fetch(url, {
         method: "POST",
         headers: {
